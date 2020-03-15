@@ -48,7 +48,19 @@
     }
 
    board.append(top);
+   let topRowsNodeList = top.children;
+   let topRows = Array.from(topRowsNodeList)
+   
+   //change to the proper colour depending on the current player's turn
+  for (let i = 0; i < topRows.length; i++) {
+    topRows[i].onmouseover = () => {
+      topRows[i].style.backgroundColor = this.currPlayer.color;
+   }
 
+    topRows[i].onmouseleave = () => {
+      topRows[i].style.backgroundColor = '#FFFFFF';
+   }
+  }
     // make main part of board
     for (let y = 0; y < this.height; y++) {
       const row = document.createElement('tr');

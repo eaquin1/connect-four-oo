@@ -40,9 +40,9 @@ form {
   border: dashed 1px lightgray;
 }
 
-#column-top td:hover {
+/* #column-top td:hover {
   background-color: gold;
-}
+} */
 
 @keyframes shake {
   10%, 90% {
